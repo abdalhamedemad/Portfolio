@@ -3,6 +3,9 @@
 </template>
 
 <style>
+* {
+  box-sizing: border-box;
+}
 li,
 ul,
 p,

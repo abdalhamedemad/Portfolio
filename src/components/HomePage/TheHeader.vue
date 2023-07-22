@@ -5,7 +5,7 @@
         <div class="name">
           <span>Abdalhameed <span color="#dd93f7">Emad</span></span>
         </div>
-        <div class="contents">
+        <div :class="[contentList ? 'contents-list contents' : 'contents']">
           <nav>
             <ul>
               <li><a href="">Education </a></li>
@@ -14,7 +14,9 @@
               <li><a href="">Expertise </a></li>
               <li><a href="">Contact </a></li>
             </ul>
-            <i>=</i>
+            <i @click="contentList = !contentList"
+              ><i class="fa-solid fa-bars"></i
+            ></i>
           </nav>
         </div>
       </div>
@@ -22,7 +24,15 @@
   </header>
 </template>
 
-<script></script>
+<script>
+export default {
+  data() {
+    return {
+      contentList: false,
+    };
+  },
+};
+</script>
 
 <style scoped>
 header {
@@ -52,14 +62,41 @@ header div div.box {
 .contents nav {
   display: flex;
   align-items: center;
+  position: relative;
 }
 .contents nav ul {
   display: flex;
   align-items: center;
 }
+.contents-list nav ul {
+  display: block !important;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  text-align: left;
+  right: 0;
+  top: 40px;
+  border: 1px solid #dd93f7;
+  /* padding: 18px; */
+  /* z-index: ; */
+}
+.contents-list nav ul li:not(:last-child) {
+  margin-bottom: 10px;
+  padding: 18px;
+  border-bottom: 1px solid #dd93f7;
+  /* width: 100%; */
+}
 .contents nav ul li {
   margin-left: 40px;
 }
+.contents-list nav ul li {
+  margin-left: 0px;
+  padding: 18px;
+  width: 100%;
+}
+
 .contents nav ul li a {
   transition: 0.3s;
 }
@@ -88,6 +125,7 @@ header div div.box {
 }
 div.contents nav i {
   display: none;
+  cursor: pointer;
 }
 @media (max-width: 865px) {
   nav i {
@@ -95,6 +133,23 @@ div.contents nav i {
   }
   nav ul {
     display: none !important;
+  }
+}
+@media (min-width: 865px) {
+  .contents-list nav ul {
+    display: flex !important;
+    align-items: center !important;
+    flex-direction: row !important;
+    position: unset;
+    border: none;
+    align-items: center;
+  }
+  .contents-list nav ul li:not(:last-child),
+  .contents-list nav ul li {
+    margin-left: 40px;
+    border-bottom: unset;
+    margin-bottom: 0px;
+    padding: 0px;
   }
 }
 </style>
