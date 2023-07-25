@@ -1,5 +1,5 @@
 <template>
-  <div class="home-page">
+  <div class="home-page" id="home">
     <div class="box">
       <div class="container">
         <div class="content">
@@ -21,7 +21,7 @@
             </p>
           </div>
           <div class="my-work-button">
-            <button>My work</button>
+            <button>My Resume</button>
           </div>
           <div class="icons">
             <div class="social-links">

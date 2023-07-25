@@ -29,6 +29,9 @@ body {
   padding: 0;
   margin: 0;
 }
+html {
+  scroll-behavior: smooth;
+}
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;

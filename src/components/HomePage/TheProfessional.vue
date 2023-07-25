@@ -1,5 +1,5 @@
 <template>
-  <div class="about-page">
+  <div class="about-page" id="professional">
     <section class="professional">
       <header>
         <h2><span>01</span>Professional</h2>

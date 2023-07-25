@@ -8,11 +8,10 @@
         <div :class="[contentList ? 'contents-list contents' : 'contents']">
           <nav>
             <ul>
-              <li><a href="">Education </a></li>
-              <li><a href="">Clients </a></li>
-              <li><a href="">Skills </a></li>
-              <li><a href="">Expertise </a></li>
-              <li><a href="">Contact </a></li>
+              <li><a href="#home">Home </a></li>
+              <li><a href="#professional">Professional </a></li>
+              <li><a href="#portfolio">Portfolio </a></li>
+              <li><a href="#contact">Contact </a></li>
             </ul>
             <i @click="contentList = !contentList"
               ><i class="fa-solid fa-bars"></i

@@ -1,5 +1,5 @@
 <template>
-  <section class="contact-me">
+  <section class="contact-me" id="contact">
     <div class="box">
       <div class="contact-content">
         <div class="contact-text">
@@ -26,8 +26,8 @@
             </div>
           </div>
           <div class="contact-p-m">
-            <input type="number" placeholder="phone" />
-            <input type="message" placeholder="message" />
+            <input type="tel" placeholder="phone" />
+            <textarea type="message" rows="5" placeholder="message"></textarea>
           </div>
           <div class="send-button">
             <button>send</button>
@@ -71,7 +71,7 @@ section.contact-me::before {
   top: 0;
   width: 100%;
   height: 100%;
-  background-color: black;
+  background-color: #333333;
   opacity: 0.45;
 }
 .contact-content {
@@ -113,6 +113,14 @@ input {
   border: none;
   text-transform: capitalize;
   padding: 15px;
+}
+textarea {
+  outline: none;
+  border: none;
+  text-transform: capitalize;
+  padding: 15px;
+  margin-bottom: 16px;
+  width: 100%;
 }
 .contact-content div.contact-form {
   width: 50%;
