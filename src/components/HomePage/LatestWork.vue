@@ -63,6 +63,7 @@
 }
 div.item-description {
   max-width: 400px;
+  text-align: start;
 }
 div.item-gif img {
   width: 400px;
