@@ -39,11 +39,12 @@ header {
   top: 0px;
   left: 0;
   width: 100vw;
-  height: 100px;
+  height: 80px;
   display: flex;
   align-items: center;
   justify-content: center;
   z-index: 2;
+  background: rgba(251, 251, 253, 0.1);
 }
 header div div.box {
   display: flex;

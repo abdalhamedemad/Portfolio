@@ -6,8 +6,22 @@
         <h4>My Latest work</h4>
       </header>
     </section>
+    <section class="latest-work">
+      <LatestWork />
+    </section>
   </div>
 </template>
+
+<script>
+import LatestWork from '@/components/HomePage/LatestWork.vue';
+export default {
+  name: 'ThePortfolio',
+  components: {
+    LatestWork,
+  },
+};
+</script>
+
 <style scoped>
 body,
 html {
@@ -23,6 +37,7 @@ div.portfolio-page {
   color: #ffffff;
   /* display: none; */
   position: relative;
+  padding-bottom: 400px;
 }
 div.portfolio-page section.portfolio {
   display: flex;
@@ -31,7 +46,7 @@ div.portfolio-page section.portfolio {
   flex-direction: column;
   padding-top: 100px;
   width: 100%;
-  height: calc(100vh - 100px);
+  /*height: calc(100vh - 100px);*/
 }
 section.portfolio header {
   display: flex;

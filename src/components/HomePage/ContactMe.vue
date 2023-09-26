@@ -30,7 +30,7 @@
             <textarea type="message" rows="5" placeholder="message"></textarea>
           </div>
           <div class="send-button">
-            <button>send</button>
+            <button @click="sendEmail">send</button>
           </div>
         </div>
       </div>
@@ -38,7 +38,42 @@
     </div>
   </section>
 </template>
-<script></script>
+<script>
+import emailjs from 'emailjs-com';
+export default {
+  name: 'ContactUs',
+  data() {
+    return {
+      name: 'mm',
+      email: 'medo.emadd23@gmail.com',
+      message: 'dfsdgsdg',
+    };
+  },
+  methods: {
+    sendEmail(e) {
+      try {
+        emailjs.sendForm(
+          'service_mp7mugd',
+          'YOUR_TEMPLATE_ID',
+          e.target,
+          'YOUR_USER_ID',
+          {
+            name: this.name,
+            email: this.email,
+            message: this.message,
+          },
+        );
+      } catch (error) {
+        console.log({ error });
+      }
+      // Reset form field
+      this.name = '';
+      this.email = '';
+      this.message = '';
+    },
+  },
+};
+</script>
 <style scoped>
 section.contact-me {
   width: 100%;
@@ -60,7 +95,8 @@ section.contact-me {
   display: flex;
   align-items: center;
   justify-content: center;
-  top: -50%;
+  /* top: -50%; */
+  transform: translateY(-50%);
   z-index: 1;
 }
 
