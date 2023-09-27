@@ -1,6 +1,6 @@
 # Portfolio
 
-Portfolio web application using Vue js ,HTML ,CSS
+Portfolio web application using Vue js ,HTML ,CSS  and JavaScript.
 
 ## Project setup
 
