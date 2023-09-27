@@ -1,6 +1,12 @@
 import { createRouter, createWebHistory } from 'vue-router';
 // import HomeView from "../views/HomeView.vue";
 import HomePage from '../views/HomePage.vue';
+
+// import(
+//   /* webpackChunkName: "about" */ // remove
+//   '../views/HomePage.vue'
+// );
+
 const routes = [
   {
     path: '/',
