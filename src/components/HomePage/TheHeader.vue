@@ -81,6 +81,9 @@ header div div.box {
   border: 1px solid #dd93f7;
   /* padding: 18px; */
   /* z-index: ; */
+  top: 51px;
+  right: -6px;
+  background: rgba(251, 251, 253, 0.1);
 }
 .contents-list nav ul li:not(:last-child) {
   margin-bottom: 10px;
