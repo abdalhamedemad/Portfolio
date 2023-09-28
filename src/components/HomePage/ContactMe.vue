@@ -75,6 +75,9 @@ export default {
 };
 </script>
 <style scoped>
+* {
+  box-sizing: border-box;
+}
 section.contact-me {
   width: 100%;
   display: flex;
@@ -115,10 +118,12 @@ section.contact-me::before {
   width: 100%;
 }
 .contact-content div.contact-text {
-  width: 50%;
+  /* width: 50%; */
+  flex-grow: 1;
 }
 .contact-content div.contact-form {
-  width: 50%;
+  /* width: 50%; */
+  flex-grow: 1;
 }
 div.contact-text {
   color: #ffffff;
@@ -136,6 +141,8 @@ div.contact-text div p.contact-paragraph {
 }
 div.contact-E-Tel {
   width: 100%;
+  /* word-wrap: break-word; */
+  word-break: break-all;
 }
 div.contact-E-Tel p:first-child {
   margin-bottom: 16px;
@@ -159,7 +166,7 @@ textarea {
   width: 100%;
 }
 .contact-content div.contact-form {
-  width: 50%;
+  /* width: 50%; */
   padding-left: 10px;
 }
 .contact-n-e {
@@ -200,5 +207,17 @@ textarea {
   background-color: #dd93f7;
   color: #ffffff;
   cursor: pointer;
+}
+@media (max-width: 992px) {
+  .contact-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .contact-content div.contact-form {
+    /* width: 50%; */
+    padding-left: 0px;
+    margin-top: 10px;
+  }
 }
 </style>
