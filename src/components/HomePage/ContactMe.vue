@@ -6,9 +6,14 @@
           <div>
             <h3>contact</h3>
             <p class="contact-paragraph">
-              I'm a paragraph. Click here to add your own text and edit me. I’m
-              a great place for you to tell a story and let your users know a
-              little more about you
+              Thank you for visiting my portfolio! If you have any inquiries,
+              collaboration opportunities, or just want to say hello, please
+              don't hesitate to reach out. Your feedback and questions are
+              valuable to me, and I'm here to assist you promptly. Feel free to
+              fill out the contact form below, and I'll get back to you as soon
+              as possible. Alternatively, you can also connect with me via email
+              or social media platforms listed below. Looking forward to hearing
+              from you!
             </p>
           </div>
           <div class="contact-E-Tel">
