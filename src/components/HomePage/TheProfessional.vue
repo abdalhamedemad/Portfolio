@@ -106,6 +106,7 @@ div.sw-box ul li {
 }
 div.sw-box ul li span:first-child {
   width: 22%;
+  z-index: 100;
 }
 div.sw-box ul li span:nth-child(2) {
   width: 70%;
@@ -116,6 +117,7 @@ div.sw-box ul li span:nth-child(2) {
 div.sw-box ul li span:nth-child(3) {
   width: 8%;
   padding: 5px;
+  z-index: 100;
 }
 div.sw-box ul li span:nth-child(2)::before {
   content: '';
