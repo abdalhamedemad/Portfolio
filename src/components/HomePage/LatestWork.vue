@@ -64,6 +64,7 @@
 div.item-description {
   max-width: 400px;
   text-align: start;
+  display: none;
 }
 div.item-gif img {
   width: 400px;
