@@ -17,8 +17,8 @@
             </p>
           </div>
           <div class="contact-E-Tel">
-            <p>medo.emadd23@gmail.com</p>
-            <p>Tel:0111-234-2248</p>
+            <p>Email: medo.emadd23@gmail.com</p>
+            <p>Tel: 0111-234-2248</p>
           </div>
         </div>
         <div class="contact-form">
@@ -121,6 +121,7 @@ section.contact-me::before {
 .contact-content {
   display: flex;
   width: 100%;
+  flex-direction: column;
 }
 .contact-content div.contact-text {
   /* width: 50%; */
@@ -172,7 +173,8 @@ textarea {
 }
 .contact-content div.contact-form {
   /* width: 50%; */
-  padding-left: 10px;
+  /* padding-left: 10px; */
+  margin-top: 24px;
 }
 .contact-n-e {
   display: flex;
