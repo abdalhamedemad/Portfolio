@@ -7,20 +7,146 @@
       </header>
       <div class="sw-box">
         <ul class="sw-items">
-          <li><span> HTML &CSS</span> <span></span><span>85%</span></li>
-          <li><span>JS </span><span></span><span>85%</span></li>
-          <li><span>VUE JS </span><span></span><span>90%</span></li>
-          <li><span>Nuxt JS </span><span></span><span>60%</span></li>
-          <li><span>Photoshop </span><span></span><span>65%</span></li>
-          <li><span>Node js </span><span></span><span>70%</span></li>
-          <li><span>express </span><span></span><span>70%</span></li>
-          <li><span>flask </span><span></span><span>65%</span></li>
-          <li><span>Mongo db </span><span></span><span>70%</span></li>
-          <li><span>sql </span><span></span><span>75%</span></li>
-          <li><span>python </span><span></span><span>85%</span></li>
-          <li><span>C++ </span><span></span><span>90%</span></li>
-          <li><span>C </span><span></span><span>90%</span></li>
-          <li><span>java </span><span></span><span>65%</span></li>
+          <li>
+            <span> HTML &CSS</span>
+            <span
+              v-animateonscroll="{
+                enterClass: 'mm1',
+                leaveClass: 'ml',
+              }"
+            ></span
+            ><span>85%</span>
+          </li>
+          <li>
+            <span>JS </span
+            ><span
+              v-animateonscroll="{
+                enterClass: 'mm2',
+                leaveClass: 'ml',
+              }"
+            ></span
+            ><span>85%</span>
+          </li>
+          <li>
+            <span>VUE JS </span
+            ><span
+              v-animateonscroll="{
+                enterClass: 'mm3',
+                leaveClass: 'ml',
+              }"
+            ></span
+            ><span>90%</span>
+          </li>
+          <li>
+            <span>Nuxt JS </span
+            ><span
+              v-animateonscroll="{
+                enterClass: 'mm4',
+                leaveClass: 'ml',
+              }"
+            ></span
+            ><span>60%</span>
+          </li>
+          <li>
+            <span>Photoshop </span
+            ><span
+              v-animateonscroll="{
+                enterClass: 'mm5',
+                leaveClass: 'ml',
+              }"
+            ></span
+            ><span>65%</span>
+          </li>
+          <li>
+            <span>Node js </span
+            ><span
+              v-animateonscroll="{
+                enterClass: 'mm6',
+                leaveClass: 'ml',
+              }"
+            ></span
+            ><span>70%</span>
+          </li>
+          <li>
+            <span>express </span
+            ><span
+              v-animateonscroll="{
+                enterClass: 'mm7',
+                leaveClass: 'ml',
+              }"
+            ></span
+            ><span>70%</span>
+          </li>
+          <li>
+            <span>flask </span
+            ><span
+              v-animateonscroll="{
+                enterClass: 'mm8',
+                leaveClass: 'ml',
+              }"
+            ></span
+            ><span>65%</span>
+          </li>
+          <li>
+            <span>Mongo db </span
+            ><span
+              v-animateonscroll="{
+                enterClass: 'mm9',
+                leaveClass: 'ml',
+              }"
+            ></span
+            ><span>70%</span>
+          </li>
+          <li>
+            <span>sql </span
+            ><span
+              v-animateonscroll="{
+                enterClass: 'mm10',
+                leaveClass: 'ml',
+              }"
+            ></span
+            ><span>75%</span>
+          </li>
+          <li>
+            <span>python </span
+            ><span
+              v-animateonscroll="{
+                enterClass: 'mm11',
+                leaveClass: 'ml',
+              }"
+            ></span
+            ><span>85%</span>
+          </li>
+          <li>
+            <span>C++ </span
+            ><span
+              v-animateonscroll="{
+                enterClass: 'mm12',
+                leaveClass: 'ml',
+              }"
+            ></span
+            ><span>90%</span>
+          </li>
+          <li>
+            <span>C </span
+            ><span
+              v-animateonscroll="{
+                enterClass: 'mm13',
+                leaveClass: 'ml',
+              }"
+            ></span
+            ><span>90%</span>
+          </li>
+          <li>
+            <span>java </span
+            ><span
+              v-animateonscroll="{
+                enterClass: 'mm14',
+                leaveClass: 'ml',
+              }"
+            ></span
+            ><span>65%</span>
+          </li>
         </ul>
       </div>
     </section>
@@ -119,7 +245,7 @@ div.sw-box ul li span:nth-child(3) {
   padding: 5px;
   z-index: 100;
 }
-div.sw-box ul li span:nth-child(2)::before {
+/* div.sw-box ul li span:nth-child(2)::before {
   content: '';
   position: absolute;
   left: 0;
@@ -127,8 +253,8 @@ div.sw-box ul li span:nth-child(2)::before {
   width: 15%;
   height: 100%;
   background-color: #dd93f7;
-}
-div.sw-box ul li:nth-child(1) span:nth-child(2)::before {
+} */
+/* div.sw-box ul li:nth-child(1) span:nth-child(2)::before {
   content: '';
   position: absolute;
   left: 0;
@@ -136,8 +262,8 @@ div.sw-box ul li:nth-child(1) span:nth-child(2)::before {
   width: 85%;
   height: 100%;
   background-color: #dd93f7;
-}
-div.sw-box ul li:nth-child(2) span:nth-child(2)::before {
+} */
+.mm1::before {
   content: '';
   position: absolute;
   left: 0;
@@ -145,8 +271,33 @@ div.sw-box ul li:nth-child(2) span:nth-child(2)::before {
   width: 85%;
   height: 100%;
   background-color: #dd93f7;
+  transition: width 2s ease-out;
 }
-div.sw-box ul li:nth-child(3) span:nth-child(2)::before {
+/* .mm {
+  width: 85%;
+  height: 100%;
+  background-color: #dd93f7;
+} */
+.ml::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 0%;
+  height: 100%;
+  background-color: #dd93f7;
+}
+.mm2::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 85%;
+  height: 100%;
+  background-color: #dd93f7;
+  transition: width 2s ease-out;
+}
+.mm3::before {
   content: '';
   position: absolute;
   left: 0;
@@ -154,8 +305,9 @@ div.sw-box ul li:nth-child(3) span:nth-child(2)::before {
   width: 90%;
   height: 100%;
   background-color: #dd93f7;
+  transition: width 2s ease-out;
 }
-div.sw-box ul li:nth-child(4) span:nth-child(2)::before {
+.mm4::before {
   content: '';
   position: absolute;
   left: 0;
@@ -163,8 +315,9 @@ div.sw-box ul li:nth-child(4) span:nth-child(2)::before {
   width: 60%;
   height: 100%;
   background-color: #dd93f7;
+  transition: width 2s ease-out;
 }
-div.sw-box ul li:nth-child(5) span:nth-child(2)::before {
+.mm5::before {
   content: '';
   position: absolute;
   left: 0;
@@ -172,8 +325,9 @@ div.sw-box ul li:nth-child(5) span:nth-child(2)::before {
   width: 65%;
   height: 100%;
   background-color: #dd93f7;
+  transition: width 2s ease-out;
 }
-div.sw-box ul li:nth-child(6) span:nth-child(2)::before {
+.mm6::before {
   content: '';
   position: absolute;
   left: 0;
@@ -181,8 +335,9 @@ div.sw-box ul li:nth-child(6) span:nth-child(2)::before {
   width: 75%;
   height: 100%;
   background-color: #dd93f7;
+  transition: width 2s ease-out;
 }
-div.sw-box ul li:nth-child(7) span:nth-child(2)::before {
+.mm7::before {
   content: '';
   position: absolute;
   left: 0;
@@ -190,8 +345,9 @@ div.sw-box ul li:nth-child(7) span:nth-child(2)::before {
   width: 75%;
   height: 100%;
   background-color: #dd93f7;
+  transition: width 2s ease-out;
 }
-div.sw-box ul li:nth-child(8) span:nth-child(2)::before {
+.mm8::before {
   content: '';
   position: absolute;
   left: 0;
@@ -199,8 +355,9 @@ div.sw-box ul li:nth-child(8) span:nth-child(2)::before {
   width: 65%;
   height: 100%;
   background-color: #dd93f7;
+  transition: width 2s ease-out;
 }
-div.sw-box ul li:nth-child(9) span:nth-child(2)::before {
+.mm9::before {
   content: '';
   position: absolute;
   left: 0;
@@ -208,8 +365,9 @@ div.sw-box ul li:nth-child(9) span:nth-child(2)::before {
   width: 70%;
   height: 100%;
   background-color: #dd93f7;
+  transition: width 2s ease-out;
 }
-div.sw-box ul li:nth-child(10) span:nth-child(2)::before {
+.mm10::before {
   content: '';
   position: absolute;
   left: 0;
@@ -217,8 +375,9 @@ div.sw-box ul li:nth-child(10) span:nth-child(2)::before {
   width: 75%;
   height: 100%;
   background-color: #dd93f7;
+  transition: width 2s ease-out;
 }
-div.sw-box ul li:nth-child(11) span:nth-child(2)::before {
+.mm11::before {
   content: '';
   position: absolute;
   left: 0;
@@ -226,8 +385,9 @@ div.sw-box ul li:nth-child(11) span:nth-child(2)::before {
   width: 85%;
   height: 100%;
   background-color: #dd93f7;
+  transition: width 2s ease-out;
 }
-div.sw-box ul li:nth-child(12) span:nth-child(2)::before {
+.mm12::before {
   content: '';
   position: absolute;
   left: 0;
@@ -235,8 +395,9 @@ div.sw-box ul li:nth-child(12) span:nth-child(2)::before {
   width: 90%;
   height: 100%;
   background-color: #dd93f7;
+  transition: width 2s ease-out;
 }
-div.sw-box ul li:nth-child(13) span:nth-child(2)::before {
+.mm13::before {
   content: '';
   position: absolute;
   left: 0;
@@ -244,8 +405,9 @@ div.sw-box ul li:nth-child(13) span:nth-child(2)::before {
   width: 90%;
   height: 100%;
   background-color: #dd93f7;
+  transition: width 2s ease-out;
 }
-div.sw-box ul li:nth-child(14) span:nth-child(2)::before {
+.mm14::before {
   content: '';
   position: absolute;
   left: 0;
@@ -253,5 +415,6 @@ div.sw-box ul li:nth-child(14) span:nth-child(2)::before {
   width: 65%;
   height: 100%;
   background-color: #dd93f7;
+  transition: width 2s ease-out;
 }
 </style>
