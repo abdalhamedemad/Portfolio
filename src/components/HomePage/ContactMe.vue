@@ -4,7 +4,7 @@
       <div class="contact-content">
         <div class="contact-text">
           <div>
-            <h3>contact</h3>
+            <h3>Contact</h3>
             <p class="contact-paragraph">
               Thank you for visiting my portfolio! If you have any inquiries,
               collaboration opportunities, or just want to say hello, please
@@ -21,60 +21,97 @@
             <p>Tel: 0111-234-2248</p>
           </div>
         </div>
-        <div class="contact-form">
+        <form @submit="sendEmail" ref="contactForm" class="contact-form">
           <div class="contact-n-e">
             <div class="n">
-              <input type="text" placeholder="Name" />
+              <input
+                v-model="name"
+                type="text"
+                placeholder="Name"
+                required
+                name="name"
+              />
             </div>
             <div class="e">
-              <input type="email" placeholder="Email" />
+              <input
+                v-model="email"
+                type="email"
+                placeholder="Email"
+                required
+                name="email"
+              />
             </div>
           </div>
           <div class="contact-p-m">
-            <input type="tel" placeholder="phone" />
-            <textarea type="message" rows="5" placeholder="message"></textarea>
+            <input
+              v-model="phone"
+              type="tel"
+              placeholder="Phone"
+              name="phone"
+            />
+            <textarea
+              v-model="message"
+              rows="5"
+              placeholder="Message"
+              required
+              name="message"
+            ></textarea>
           </div>
           <div class="send-button">
-            <button @click="sendEmail">send</button>
+            <button type="submit">Send</button>
           </div>
-        </div>
+        </form>
       </div>
       <div class="social-link"></div>
     </div>
   </section>
 </template>
+
 <script>
 import emailjs from 'emailjs-com';
+
 export default {
-  name: 'ContactUs',
+  name: 'ContactMe',
   data() {
     return {
-      name: 'mm',
-      email: 'medo.emadd23@gmail.com',
-      message: 'dfsdgsdg',
+      name: '',
+      email: '',
+      phone: '',
+      message: '',
     };
   },
   methods: {
     sendEmail(e) {
-      try {
-        emailjs.sendForm(
-          'service_mp7mugd',
-          'YOUR_TEMPLATE_ID',
-          e.target,
-          'YOUR_USER_ID',
-          {
-            name: this.name,
-            email: this.email,
-            message: this.message,
-          },
-        );
-      } catch (error) {
-        console.log({ error });
+      e.preventDefault(); // Prevent the default form submission behavior
+
+      // Access the form element via ref
+      const form = this.$refs.contactForm;
+      console.log(form);
+
+      if (form) {
+        // Use emailjs.sendForm with the form element
+        emailjs
+          .sendForm(
+            'service_td3ogah',
+            'template_s949z75',
+            form,
+            '62gB-jnc3tx9wiex_',
+          )
+          .then((response) => {
+            console.log('Success:', response);
+            // Reset form fields
+            this.name = '';
+            this.email = '';
+            this.phone = '';
+            this.message = '';
+            form.reset(); // Optional: Reset the form element
+          })
+          .catch((error) => {
+            console.log('Error:', error);
+          });
+      } else {
+        console.error('Form element not found');
       }
-      // Reset form field
-      this.name = '';
-      this.email = '';
-      this.message = '';
     },
   },
 };
@@ -89,7 +126,6 @@ section.contact-me {
   align-items: center;
   justify-content: center;
   position: relative;
-  /* padding-bottom: 370px; */
   height: 500px;
   background-image: url('../../assets/bg2.jpg');
   background-size: cover;
@@ -103,11 +139,9 @@ section.contact-me {
   display: flex;
   align-items: center;
   justify-content: center;
-  /* top: -50%; */
   transform: translateY(-50%);
   z-index: 1;
 }
-
 section.contact-me::before {
   content: '';
   position: absolute;
@@ -124,12 +158,11 @@ section.contact-me::before {
   flex-direction: column;
 }
 .contact-content div.contact-text {
-  /* width: 50%; */
   flex-grow: 1;
 }
 .contact-content div.contact-form {
-  /* width: 50%; */
   flex-grow: 1;
+  margin-top: 24px;
 }
 div.contact-text {
   color: #ffffff;
@@ -147,7 +180,6 @@ div.contact-text div p.contact-paragraph {
 }
 div.contact-E-Tel {
   width: 100%;
-  /* word-wrap: break-word; */
   word-break: break-all;
 }
 div.contact-E-Tel p:first-child {
@@ -156,44 +188,35 @@ div.contact-E-Tel p:first-child {
 div.contact-E-Tel p:nth-child(2) {
   width: 100%;
 }
-input {
-  outline: none;
-  height: 40px;
-  border: none;
-  text-transform: capitalize;
-  padding: 15px;
-}
+input,
 textarea {
   outline: none;
   border: none;
   text-transform: capitalize;
   padding: 15px;
+}
+input {
+  height: 40px;
+}
+textarea {
   margin-bottom: 16px;
   width: 100%;
-}
-.contact-content div.contact-form {
-  /* width: 50%; */
-  /* padding-left: 10px; */
-  margin-top: 24px;
 }
 .contact-n-e {
   display: flex;
   justify-content: space-between;
   width: 100%;
 }
-.n {
+.n,
+.e {
   width: 100%;
   padding-right: 5px;
 }
 .e {
-  width: 100%;
   padding-left: 5px;
 }
 .contact-n-e input {
-  /* width: 50%; */
-  /* margin-right: 10px; */
   width: 100%;
-
   margin-bottom: 16px;
 }
 .contact-p-m {
@@ -202,7 +225,6 @@ textarea {
 }
 .contact-p-m input {
   margin-bottom: 16px;
-  /* width: 305px; */
 }
 .send-button {
   width: 100%;
@@ -222,7 +244,6 @@ textarea {
     align-items: center;
   }
   .contact-content div.contact-form {
-    /* width: 50%; */
     padding-left: 0px;
     margin-top: 10px;
   }
