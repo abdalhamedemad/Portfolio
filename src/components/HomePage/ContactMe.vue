@@ -21,69 +21,126 @@
             <p>Tel: 0111-234-2248</p>
           </div>
         </div>
-        <form @submit="sendEmail" ref="contactForm" class="contact-form">
-          <div class="contact-n-e">
-            <div class="n">
-              <input
+        <form @submit="sendEmail" ref="contactForm" class="contact-form w-full">
+          <div class="contact-n-e w-full">
+            <div class="n mt-5">
+              <!-- <input
                 v-model="name"
                 type="text"
                 placeholder="Name"
                 required
                 name="name"
-              />
+              /> -->
+              <v-text-field
+                v-model="name"
+                :counter="10"
+                :rules="nameRules"
+                label="Name"
+                hide-details
+                required
+                name="name"
+                class="text-white"
+              ></v-text-field>
             </div>
-            <div class="e">
-              <input
+            <div class="e mt-5">
+              <!-- <input
                 v-model="email"
                 type="email"
                 placeholder="Email"
                 required
                 name="email"
-              />
+              /> -->
+              <v-text-field
+                v-model="email"
+                :counter="10"
+                :rules="nameRules"
+                label="Email"
+                hide-details
+                class="text-white"
+                required
+              ></v-text-field>
             </div>
           </div>
-          <div class="contact-p-m">
-            <input
+          <div class="contact-p-m mt-5">
+            <!-- <input
               v-model="phone"
               type="tel"
               placeholder="Phone"
               name="phone"
-            />
-            <textarea
+            /> -->
+            <v-text-field
+              v-model="phone"
+              :counter="10"
+              :rules="nameRules"
+              label="Phone"
+              hide-details
+              class="text-white"
+              required
+            ></v-text-field>
+            <!-- <textarea
               v-model="message"
               rows="5"
               placeholder="Message"
               required
               name="message"
-            ></textarea>
+              class="text-white mt-5 min-h-100 border-1 border-white"
+            ></textarea> -->
+            <v-textarea
+              v-model="message"
+              class="text-white mt-5"
+              name="message"
+              required
+              label="Message"
+            ></v-textarea>
           </div>
           <div class="send-button">
-            <button type="submit">Send</button>
+            <!-- <button type="submit">Send</button> -->
+            <v-btn
+              :loading="loading"
+              class="flex-grow-1"
+              height="48"
+              variant="tonal"
+              type="submit"
+            >
+              Send
+            </v-btn>
           </div>
         </form>
       </div>
       <div class="social-link"></div>
     </div>
+    <TheDialogVue :dialog="openDialog" :text="text" />
   </section>
 </template>
 
 <script>
 import emailjs from 'emailjs-com';
+import TheDialogVue from './TheDialog.vue';
 
 export default {
   name: 'ContactMe',
+  components: {
+    TheDialogVue,
+  },
   data() {
     return {
       name: '',
       email: '',
       phone: '',
       message: '',
+      loading: false,
+      openDialog: false,
+      text: '',
     };
   },
   methods: {
+    load() {
+      this.loading = true;
+      setTimeout(() => (this.loading = false), 3000);
+    },
     sendEmail(e) {
       e.preventDefault(); // Prevent the default form submission behavior
-
+      this.loading = true;
       // Access the form element via ref
       const form = this.$refs.contactForm;
       console.log(form);
@@ -99,6 +156,9 @@ export default {
           )
           .then((response) => {
             console.log('Success:', response);
+            this.text = 'Email sent successfully!';
+            this.openDialog = true;
+            this.loading = false;
             // Reset form fields
             this.name = '';
             this.email = '';
@@ -108,6 +168,9 @@ export default {
           })
           .catch((error) => {
             console.log('Error:', error);
+            this.text = 'Failed to send email!';
+            this.openDialog = true;
+            this.loading = false;
           });
       } else {
         console.error('Form element not found');
@@ -237,7 +300,7 @@ textarea {
   color: #ffffff;
   cursor: pointer;
 }
-@media (max-width: 992px) {
+/* @media (max-width: 992px) {
   .contact-content {
     display: flex;
     flex-direction: column;
@@ -247,5 +310,5 @@ textarea {
     padding-left: 0px;
     margin-top: 10px;
   }
-}
+} */
 </style>

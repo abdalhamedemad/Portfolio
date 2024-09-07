@@ -9,6 +9,12 @@
         <div class="item-gif">
           <img src="../../assets/3.gif" alt="" />
         </div>
+        <!-- <TheCard
+          title="Apple Website"
+          description="Frontend project that mimcis the real apple website using Vue.js 3 && Nuxt 3 && Tailwindcss && HTML && CSS"
+          imgSrc="http://localhost:5173/src/assets/3.gif"
+          tech="Vue.js 3 && Nuxt 3 && Tailwindcss && HTML && CSS"
+        /> -->
       </li>
       <li>
         <div class="item-description">
@@ -39,6 +45,19 @@
     </ul>
   </div>
 </template>
+<script>
+import TheCard from './TheCard.vue';
+import imgSrc from '../../assets/3.gif';
+export default {
+  components: {
+    TheCard,
+  },
+  data: () => {
+    return {};
+  },
+};
+</script>
+
 <style scoped>
 .latest-work {
   width: 100%;
