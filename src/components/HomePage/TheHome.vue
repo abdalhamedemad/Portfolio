@@ -92,7 +92,7 @@ div.home-page::before {
 }
 div.box {
   /* the height of the Header (nav bar) is 100px */
-  padding-top: 100px;
+  padding-top: 50px;
   width: 100%;
   height: 100%;
 }

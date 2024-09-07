@@ -5,7 +5,7 @@
         <div class="contact-text">
           <div>
             <h3>Contact</h3>
-            <p class="contact-paragraph">
+            <p class="contact-paragraph sm:block">
               Thank you for visiting my portfolio! If you have any inquiries,
               collaboration opportunities, or just want to say hello, please
               don't hesitate to reach out. Your feedback and questions are
@@ -202,7 +202,7 @@ section.contact-me {
   display: flex;
   align-items: center;
   justify-content: center;
-  transform: translateY(-50%);
+  transform: translateY(-25%);
   z-index: 1;
 }
 section.contact-me::before {
@@ -237,9 +237,15 @@ div.contact-text h3 {
   margin-bottom: 16px;
 }
 div.contact-text div p.contact-paragraph {
+  display: none;
   margin-bottom: 40px;
   width: 100%;
   padding-right: 16px;
+}
+@media (min-width: 640px) {
+  .contact-paragraph {
+    display: block !important; /* Show as block on larger screens */
+  }
 }
 div.contact-E-Tel {
   width: 100%;
