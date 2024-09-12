@@ -1,6 +1,6 @@
 <template>
-  <section class="contact-me" id="contact">
-    <div class="box">
+  <section class="contact-me">
+    <div class="box" id="contact">
       <div class="contact-content">
         <div class="contact-text">
           <div>
