@@ -6,8 +6,7 @@
           <div class="hello-word"><h3>Hello I'm a</h3></div>
           <div class="front-end-word">
             <h2>
-              Front-End <br />
-              Developer
+              Software Engineer
             </h2>
           </div>
           <div class="introduction">
